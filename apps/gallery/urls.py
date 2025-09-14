@@ -5,5 +5,4 @@ app_name = 'gallery'
 
 urlpatterns = [
     path('', views.gallery_view, name='index'),
-    path('album/<int:pk>/', views.album_detail, name='album'),
 ]

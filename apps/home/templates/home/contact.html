@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact | {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+        <h1 class="text-5xl font-bold text-white">Get in Touch</h1>
+        <p class="py-4 text-lg">We'd love to hear from you. Reach out with any questions or feedback.</p>
+    </div>
+
+    <div class="flex flex-wrap -mx-4">
+        <!-- Contact Form -->
+        <div class="w-full lg:w-1/2 px-4 mb-8">
+            <div class="card glass">
+                <div class="card-body">
+                    <h2 class="card-title mb-4">Send us a message</h2>
+                    <form>
+                        <div class="form-control mb-4">
+                            <label class="label">
+                                <span class="label-text">Name</span>
+                            </label>
+                            <input type="text" placeholder="Your Name" class="input input-bordered" required />
+                        </div>
+                        <div class="form-control mb-4">
+                            <label class="label">
+                                <span class="label-text">Email</span>
+                            </label>
+                            <input type="email" placeholder="Your Email" class="input input-bordered" required />
+                        </div>
+                        <div class="form-control mb-4">
+                            <label class="label">
+                                <span class="label-text">Message</span>
+                            </label>
+                            <textarea class="textarea textarea-bordered h-24" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div class="form-control mt-6">
+                            <button class="btn btn-primary">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map and Info -->
+        <div class="w-full lg:w-1/2 px-4 mb-8">
+            <div class="card glass">
+                <div class="card-body">
+                    <h2 class="card-title mb-4">Our Location</h2>
+                    <div class="w-full h-64 bg-surface rounded-lg mb-4">
+                        <!-- Map Placeholder -->
+                        <div class="w-full h-full flex items-center justify-center">
+                            <p>Map loading...</p>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold">Accolades HQ</h3>
+                    <p>123 Tech Street, Innovation City, 12345</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mt-16">
+        <h2 class="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+        <div class="collapse collapse-arrow bg-base-200 mb-2">
+            <input type="radio" name="my-accordion-2" checked="checked" /> 
+            <div class="collapse-title text-xl font-medium">
+                How do I join the community?
+            </div>
+            <div class="collapse-content"> 
+                <p>You can join by clicking the "Join Now" button in the navigation bar and filling out the registration form.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mb-2">
+            <input type="radio" name="my-accordion-2" /> 
+            <div class="collapse-title text-xl font-medium">
+                Are events free?
+            </div>
+            <div class="collapse-content"> 
+                <p>Most of our events are free for members. Some special workshops or summits may have a nominal fee.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" /> 
+            <div class="collapse-title text-xl font-medium">
+                How can I contribute to the blog?
+            </div>
+            <div class="collapse-content"> 
+                <p>We welcome contributions from our members! Please reach out to our content team through the contact form.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Blog | {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+        <h1 class="text-5xl font-bold text-white">From the Blog</h1>
+        <p class="py-4 text-lg">News, announcements, and articles from the Accolades community.</p>
+    </div>
+
+    <!-- Filter and Search -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <button class="btn btn-primary">All</button>
+        <button class="btn btn-ghost">Announcements</button>
+        <button class="btn btn-ghost">Tutorials</button>
+        <button class="btn btn-ghost">Community</button>
+        <div class="form-control">
+            <input type="text" placeholder="Search articles..." class="input input-bordered w-full md:w-auto" />
+        </div>
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Blog Post 1 -->
+        <div class="card glass shadow-xl image-full">
+            <figure><img src="https://picsum.photos/seed/blog1/400/225" alt="Blog Post" /></figure>
+            <div class="card-body">
+                <h2 class="card-title">The Future of Web Development</h2>
+                <p>An overview of the trends that will shape the future of web development.</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Read More</button>
+                </div>
+            </div>
+        </div>
+        <!-- Blog Post 2 -->
+        <div class="card glass shadow-xl image-full">
+            <figure><img src="https://picsum.photos/seed/blog2/400/225" alt="Blog Post" /></figure>
+            <div class="card-body">
+                <h2 class="card-title">Getting Started with 3D in the Browser</h2>
+                <p>A beginner's guide to creating 3D experiences on the web.</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Read More</button>
+                </div>
+            </div>
+        </div>
+        <!-- Blog Post 3 -->
+        <div class="card glass shadow-xl image-full">
+            <figure><img src="https://picsum.photos/seed/blog3/400/225" alt="Blog Post" /></figure>
+            <div class="card-body">
+                <h2 class="card-title">Community Spotlight: Member Achievements</h2>
+                <p>Highlighting the amazing work of our community members.</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Read More</button>
+                </div>
+            </div>
+        </div>
+        <!-- Add more blog posts as needed -->
+    </div>
+
+    <!-- Pagination -->
+    <div class="join flex justify-center mt-12">
+        <button class="join-item btn">1</button>
+        <button class="join-item btn btn-active">2</button>
+        <button class="join-item btn">3</button>
+        <button class="join-item btn">4</button>
+    </div>
+
+</div>
+{% endblock %}

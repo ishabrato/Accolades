@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Events | {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+        <h1 class="text-5xl font-bold text-white">Community Events</h1>
+        <p class="py-4 text-lg">Discover upcoming events, workshops, and meetups.</p>
+    </div>
+
+    <!-- Filter and Search -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <button class="btn btn-primary">All</button>
+        <button class="btn btn-ghost">Workshops</button>
+        <button class="btn btn-ghost">Meetups</button>
+        <button class="btn btn-ghost">Summits</button>
+        <div class="form-control">
+            <input type="text" placeholder="Search events..." class="input input-bordered w-full md:w-auto" />
+        </div>
+    </div>
+
+    <!-- Events Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Event Card 1 -->
+        <div class="card glass card-3d shadow-xl">
+            <figure><img src="https://picsum.photos/seed/event4/400/225" alt="Event" /></figure>
+            <div class="card-body">
+                <div class="flex justify-between items-center">
+                    <h2 class="card-title">Cyber Security Summit</h2>
+                    <div class="badge badge-secondary">CyberSec</div>
+                </div>
+                <p>Join us for a deep dive into the world of cyber security.</p>
+                <div class="text-sm font-bold text-accent">25 Days, 10:30:00</div>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary glow-on-hover shadow-primary">Register</button>
+                </div>
+            </div>
+        </div>
+        <!-- Event Card 2 -->
+        <div class="card glass card-3d shadow-xl">
+            <figure><img src="https://picsum.photos/seed/event5/400/225" alt="Event" /></figure>
+            <div class="card-body">
+                <div class="flex justify-between items-center">
+                    <h2 class="card-title">Frontend Frameworks</h2>
+                    <div class="badge badge-primary">Workshop</div>
+                </div>
+                <p>A hands-on workshop on the latest frontend technologies.</p>
+                <div class="text-sm font-bold text-accent">30 Days, 18:00:00</div>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary glow-on-hover shadow-primary">Register</button>
+                </div>
+            </div>
+        </div>
+        <!-- Event Card 3 -->
+        <div class="card glass card-3d shadow-xl">
+            <figure><img src="https://picsum.photos/seed/event6/400/225" alt="Event" /></figure>
+            <div class="card-body">
+                <div class="flex justify-between items-center">
+                    <h2 class="card-title">Cloud Native Meetup</h2>
+                    <div class="badge badge-accent text-black">Meetup</div>
+                </div>
+                <p>Networking event for cloud computing professionals.</p>
+                <div class="text-sm font-bold text-accent">45 Days, 12:15:00</div>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary glow-on-hover shadow-primary">Join</button>
+                </div>
+            </div>
+        </div>
+        <!-- Add more event cards as needed -->
+    </div>
+
+</div>
+{% endblock %}

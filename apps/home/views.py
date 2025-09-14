@@ -1,8 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("I am home")
+    return render(request, 'home/home.html')
 
-def about(request):
-    return HttpResponse("I am about page")
+def contact(request):
+    return render(request, 'home/contact.html')

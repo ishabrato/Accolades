@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="accolades">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Accolades Community{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/output.css' %}">
+    <style>
+        /* Custom styles for glassmorphism and other effects */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .glow-on-hover {
+            transition: box-shadow 0.3s ease-out;
+        }
+        .glow-on-hover:hover {
+            box-shadow: 0 0 15px 0px var(--tw-shadow-color, #0EA5E9);
+        }
+        .card-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+        .card-3d:hover {
+            transform: rotateY(15deg) rotateX(15deg) scale3d(1.05, 1.05, 1.05);
+        }
+    </style>
+</head>
+<body class="bg-dark text-gray-300 font-sans">
+
+    <div class="navbar sticky top-0 z-50 glass">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/events/">Events</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/members/">Members</a></li>
+                    <li><a href="/gallery/">Gallery</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                </ul>
+            </div>
+            <a class="btn btn-ghost text-xl text-primary" href="/">Accolades</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="/">Home</a></li>
+                <li><a href="/events/">Events</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/members/">Members</a></li>
+                <li><a href="/gallery/">Gallery</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a class="btn btn-primary glow-on-hover shadow-primary">Join Now</a>
+        </div>
+    </div>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer p-10 bg-neutral text-neutral-content">
+        <nav>
+            <h6 class="footer-title">Pages</h6> 
+            <a class="link link-hover" href="/">Home</a>
+            <a class="link link-hover" href="/events/">Events</a>
+            <a class="link link-hover" href="/blog/">Blog</a>
+            <a class="link link-hover" href="/gallery/">Gallery</a>
+        </nav> 
+        <nav>
+            <h6 class="footer-title">Community</h6> 
+            <a class="link link-hover" href="/members/">Members</a>
+            <a class="link link-hover" href="#">Guidelines</a>
+            <a class="link link-hover" href="#">Leaderboard</a>
+        </nav> 
+        <nav>
+            <h6 class="footer-title">Legal</h6> 
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+            <a class="link link-hover">Cookie policy</a>
+        </nav>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

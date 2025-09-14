@@ -5,5 +5,4 @@ app_name = 'members'
 
 urlpatterns = [
     path('', views.member_list, name='list'),
-    path('<int:pk>/', views.member_profile, name='profile'),
 ]

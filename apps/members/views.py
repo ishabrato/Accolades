@@ -1,7 +1,4 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 def member_list(request):
-    return HttpResponse("I am members")
-
-def member_profile(request, pk):
-    return HttpResponse(f"I am member profile {pk}")
+    return render(request, 'members/members.html')

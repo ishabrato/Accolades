@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Members | {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+        <h1 class="text-5xl font-bold text-white">Our Community</h1>
+        <p class="py-4 text-lg">Meet the talented members of the Accolades community.</p>
+    </div>
+
+    <!-- Search and Filter -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <div class="form-control">
+            <input type="text" placeholder="Search members..." class="input input-bordered w-full md:w-auto" />
+        </div>
+        <button class="btn btn-primary">All</button>
+        <button class="btn btn-ghost">Leadership</button>
+        <button class="btn btn-ghost">Developers</button>
+        <button class="btn btn-ghost">Designers</button>
+    </div>
+
+    <!-- Leadership Team -->
+    <h2 class="text-4xl font-bold text-center mb-12">Leadership Team</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <!-- Leadership Card 1 -->
+        <div class="card glass card-3d shadow-xl text-center">
+            <figure class="px-10 pt-10">
+                <img src="https://i.pravatar.cc/150?u=leader1" alt="Member" class="rounded-full" />
+            </figure>
+            <div class="card-body items-center text-center">
+                <h2 class="card-title">Alex Johnson</h2>
+                <p>Community Founder</p>
+                <div class="card-actions">
+                    <div class="badge badge-outline">Leadership</div>
+                </div>
+            </div>
+        </div>
+        <!-- Leadership Card 2 -->
+        <div class="card glass card-3d shadow-xl text-center">
+            <figure class="px-10 pt-10">
+                <img src="https://i.pravatar.cc/150?u=leader2" alt="Member" class="rounded-full" />
+            </figure>
+            <div class="card-body items-center text-center">
+                <h2 class="card-title">Maria Garcia</h2>
+                <p>Head of Events</p>
+                <div class="card-actions">
+                    <div class="badge badge-outline">Events</div>
+                </div>
+            </div>
+        </div>
+        <!-- Add more leadership cards -->
+    </div>
+
+    <!-- Members Grid -->
+    <h2 class="text-4xl font-bold text-center mb-12">Community Members</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Member Card 1 -->
+        <div class="card glass card-3d shadow-xl text-center">
+            <figure class="px-10 pt-10">
+                <img src="https://i.pravatar.cc/150?u=member1" alt="Member" class="rounded-full" />
+            </figure>
+            <div class="card-body items-center text-center">
+                <h2 class="card-title">John Doe</h2>
+                <p>Frontend Developer</p>
+                <div class="card-actions">
+                    <div class="badge badge-primary">React</div>
+                    <div class="badge badge-secondary">Vue</div>
+                </div>
+            </div>
+        </div>
+        <!-- Member Card 2 -->
+        <div class="card glass card-3d shadow-xl text-center">
+            <figure class="px-10 pt-10">
+                <img src="https://i.pravatar.cc/150?u=member2" alt="Member" class="rounded-full" />
+            </figure>
+            <div class="card-body items-center text-center">
+                <h2 class="card-title">Jane Smith</h2>
+                <p>UI/UX Designer</p>
+                <div class="card-actions">
+                    <div class="badge badge-accent text-black">Figma</div>
+                    <div class="badge badge-outline">UX</div>
+                </div>
+            </div>
+        </div>
+        <!-- Add more member cards -->
+    </div>
+
+</div>
+{% endblock %}

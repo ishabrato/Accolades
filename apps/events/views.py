@@ -1,13 +1,4 @@
-from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
-from .models import Event
+from django.shortcuts import render
 
 def event_list(request):
-    return HttpResponse("I am events")
-
-def event_detail(request, pk):
-    event = get_object_or_404(Event, pk=pk)
-    return HttpResponse(f"I am event detail for: {event.title}")
-
-def upcoming_events(request):
-    return HttpResponse("I am upcoming events")
+    return render(request, 'events/events.html')

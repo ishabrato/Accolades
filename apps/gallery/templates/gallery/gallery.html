@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Gallery | {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+        <h1 class="text-5xl font-bold text-white">Gallery</h1>
+        <p class="py-4 text-lg">A visual journey through our community's moments.</p>
+    </div>
+
+    <!-- Filter -->
+    <div class="flex justify-center gap-4 mb-12">
+        <button class="btn btn-primary">All</button>
+        <button class="btn btn-ghost">Events</button>
+        <button class="btn btn-ghost">Workshops</button>
+        <button class="btn btn-ghost">Community Fun</button>
+    </div>
+
+    <!-- Masonry Grid -->
+    <div class="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+        <!-- Image 1 -->
+        <div class="relative overflow-hidden rounded-lg">
+            <img class="w-full h-auto" src="https://picsum.photos/seed/gallery1/500/300" alt="Gallery image">
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <p class="text-white text-lg">Tech Summit 2025</p>
+            </div>
+        </div>
+        <!-- Image 2 -->
+        <div class="relative overflow-hidden rounded-lg">
+            <img class="w-full h-auto" src="https://picsum.photos/seed/gallery2/500/700" alt="Gallery image">
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <p class="text-white text-lg">Hackathon Winners</p>
+            </div>
+        </div>
+        <!-- Image 3 -->
+        <div class="relative overflow-hidden rounded-lg">
+            <img class="w-full h-auto" src="https://picsum.photos/seed/gallery3/500/400" alt="Gallery image">
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <p class="text-white text-lg">Community Meetup</p>
+            </div>
+        </div>
+        <!-- Add more images with varying heights -->
+    </div>
+
+</div>
+{% endblock %}

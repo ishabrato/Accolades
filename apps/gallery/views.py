@@ -1,7 +1,4 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 def gallery_view(request):
-    return HttpResponse("I am gallery")
-
-def album_detail(request, pk):
-    return HttpResponse(f"I am album {pk}")
+    return render(request, 'gallery/gallery.html')
